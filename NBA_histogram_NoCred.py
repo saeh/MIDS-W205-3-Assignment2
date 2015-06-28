@@ -13,7 +13,7 @@ myBucket = conn.get_bucket('nba_twitter_mids205')
 tokenizer = nltk.tokenize.RegexpTokenizer(r'\w+')
 
 #again loop over the hashtags
-hashtag_list = ['#NBAFinals2015$','#NBAFinals2015_AND_#Warriors','^#Warriors']
+hashtag_list = ['#NBAFinals2015$','#NBAFinals2015_AND_#Warriors','[0-9]_#Warriors']
 for hashtag in hashtag_list:
     #filter the keys by the hashtag
     keys = myBucket.get_all_keys()
